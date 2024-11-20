@@ -1,3 +1,5 @@
 # resume
 
-Edit the url as url/resume.pdf to download the recent release of my resume
+## Visit this link to view the recent release of my updated resume: 
+
+`https://karankhandekar1729.github.io/resume/resume.pdf`
