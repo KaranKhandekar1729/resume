@@ -7,7 +7,6 @@
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
@@ -15,12 +14,11 @@
 \usepackage{fontawesome}
 \usepackage{hyperref}
 
-
 \input{glyphtounicode}
 
 % -------------------- FONT --------------------
 \pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
+\fancyhf{}
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
@@ -29,7 +27,7 @@
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-1in} % Default was -.5in
+\addtolength{\topmargin}{-1in}
 \addtolength{\textheight}{1.0in}
 
 \urlstyle{same}
@@ -48,7 +46,7 @@
   \vspace{-4pt}\scshape\raggedright\large
 }{\hspace{-.15in}}{0em}{}[\color{black}\vspace{-8pt}]
 
-% Ensure that generate pdf is machine readable/ATS parsable
+% Ensure generated PDF is machine readable / ATS parsable
 \pdfgentounicode=1
 
 % -------------------- CUSTOM COMMANDS --------------------
@@ -93,118 +91,127 @@
 % -------------------- START OF DOCUMENT --------------------
 \begin{document}
 
-% -------------------- HEADING--------------------
-\begin{flushright}
-  \vspace{-4pt}
-\end{flushright}
-
-\vspace{-7pt}
-
+% -------------------- HEADING --------------------
 \begin{center}
     \textbf{\Huge \scshape Karan Khandekar} \\ \vspace{8pt}
-    \small 
-    \faGithub
-    \href{github.com/KaranKhandekar1729}{\underline{github.com/KaranKhandekar1729}} $  $
-    % \faCode $  $
-    % \href{https://www.johndoe.com}
-    % {\underline{johndoe.com}} $  $
-    \faEnvelope$  $
+    \small
+    \faGithub\ $
+    \href{https://github.com/KaranKhandekar1729}
+    {\underline{KaranKhandekar1729}\ \faExternalLink} $  $
+    \faEnvelope\ $
     \href{mailto:karankhandekar028@gmail.com}
-    {\underline{karankhandekar028@gmail.com}}
-    \faPhone$  $
-    \underline{+919819629531}
-    \underline{Kandlivali, Mumbai}
-    \faLinkedin$  $
-    \href{linkedin.com/in/karankhandekar}{\underline{linkedin.com/in/karankhandekar}} $  $
+    {\underline{karankhandekar028@gmail.com}} $  $
+    \faPhone\ $
+    +91 9819629531 $  $
+    \faMapMarker\ $
+    Kandivali, Mumbai $  $
+    \faLinkedin\ $
+    \href{https://linkedin.com/in/karankhandekar}
+    {\underline{karankhandekar}\ \faExternalLink}
 \end{center}
 
-% -------------------- EDUCATION --------------------
-\section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-        {Patkar Varde College, University of Mumbai}{April 2026}
-        {Bachelor of Science in Computer Science}{CGPA: 8.89/10.0}
-  
-    \resumeSubheading
-      {Patkar Varde College of Science}{April 2022}
-      {High School Diploma}{Grade: A}
-      
-    % \resumeSubheading
-    %   {High School \footnotesize{(Dual Enrollment)}}{June 2022}
-    %   {}{GPA: 4.0/4.0}
-
-  \resumeSubHeadingListEnd
-
-% -------------------- SKILLS --------------------
-\section{Skills}
-\begin{itemize}[leftmargin=0.15in, label={}]
-\small{\item{
-    \textbf{Design Tools}{: Affinity, Framer, Figma, Canva} \\
-    
-    \textbf{Frontend Frameworks}{: Vue.js, React.js} \\
-    
-    \textbf{Libraries / Tools}{: TailwindCSS, Primeflex, Stripe.js, Cloudinary} \\
-    
-    
-    \textbf{Version Control}{: Git/GitHub} \\
-}}
-\end{itemize}
-
-% -------------------- EXPERIENCE --------------------
+% -------------------- PROFESSIONAL EXPERIENCE --------------------
 \section{Professional Experience}
 \resumeSubHeadingListStart
 
 \resumeProjectHeading
-{\textbf{AI Plans} $|$ \footnotesize\emph{Frontend Developer Intern}}{May 2025 -- July 2026}
+{\textbf{AI Plans} $|$ \footnotesize\emph{Product Designer + Engineer}}{May 2025 -- July 2026}
 \resumeItemListStart
-    \resumeItem{Developed \textbf{advanced search functionality} with filtering for research papers, enhancing user navigation and content discovery.}
-    \resumeItem{Enhanced user experience for courses by implementing \textbf{markdown support} for authors, code block rendering, and optimizing page \textbf{LCP load times from seconds to milliseconds} through \textbf{Cloudinary integration}, thus improving reading experience.}
-    \resumeItem{Redesigned \textbf{review submission interface} to improve overall feel for submitting reviews.}
-    \resumeItem{Integrated embedded \textbf{Stripe payment system} with streamlined checkout flow, enabling seamless course purchase transactions and improving user trust.}
-    \resumeItem{Built the landing page for their AI Safety research program which ended up getting 290+ applicants, including senior engineers from Meta, AWS, AMD, Microsoft, Sineam and 100+ PhD researchers.}
-    \resumeItem{Built an in-house event platform for event management with admin panels, ticket purchasing and add to calendar feature.} 
-    \resumeItem{\textbf{\textit{Tech Stack: Vue.js, Javascript, Primeflex, Node.js, Express.js, PocketBase, Stripe.js, Cloudinary}}}
+
+\resumeItem{Built the \textbf{course platform end-to-end}, supporting standalone and cohort-based courses serving \textbf{40+ students}, with Stripe payments and an admin CMS for curriculum, pricing, prerequisites, instructors, and cohort schedules.}
+
+\resumeItem{Improved the learning experience by reducing \textbf{individual lesson load times by up to 99.98\%} through selective data fetching, lazy loading, shimmer loading states, and Cloudinary-backed media delivery; enabled returning students to reach their lesson from the homepage in \textbf{<5s}.}
+
+\resumeItem{Built a custom \textbf{cohort instructor call-booking system} using Bun.js and Google Calendar APIs, enforcing \textbf{4 calls/month and 1 call/week} to automate scheduling while preserving program-level booking constraints.}
+
+\resumeItem{Designed and engineered the \textbf{Moonshot Alignment Program} landing page, generating \textbf{290+ applications}, including \textbf{100+ PhD researchers} and senior engineers from \textbf{Meta, AWS, AMD, and Microsoft}.}
+
+\resumeItem{Built an in-house \textbf{event platform} supporting complex events with multiple ticket types, ticket-specific questions, custom information tabs, project submissions, and \textbf{regional admin controls for country-wide events}; one event attracted \textbf{[500+]} attendees worldwide and generated \textbf{€1K+} in ticket revenue.}
+
+\resumeItem{Led the \textbf{complete site redesign and design system}, establishing reusable design tokens, typography, accessibility patterns, custom themes, illustrations, and event branding across courses, research, and events.}
+
+\resumeItem{\textbf{Tech Stack:} Vue.js, JavaScript, Express.js, Bun.js, PocketBase, TailwindCSS, Stripe.js, Google Calendar API, Cloudinary, Marked.js, Highlight.js}
+
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
-
 
 % -------------------- PROJECTS --------------------
 \section{Projects}
 \resumeSubHeadingListStart
 
 \resumeProjectHeading
-{\textbf{\href{https://sendaletter.vercel.app}{\underline{Send a Letter \faExternalLink}}} $|$ \footnotesize\emph{React.js, Fabric.js, TailwindCSS, Framer}}{}
+{\textbf{\href{https://sendaletter.vercel.app}
+{\underline{Send a Letter}\ \faExternalLink}} $|$
+\footnotesize\emph{React.js, Fabric.js, TailwindCSS, Framer}}{}
 \resumeItemListStart
-    \resumeItem{Designed and developed an app which lets users create interactive and personalised digital letters.}
-    \resumeItem{Used cloudinary with optimised urls for better load times and user experience.}
-    \resumeItem{Designed a working user flow to remove any hurdles from immediately getting to write a letter improving user experience.}
-    \resumeItem{Added secure shareable links to ensure privacy.}
+
+\resumeItem{Designed and developed an interactive web app for creating \textbf{personalized digital letters}, combining a visual editor with a streamlined user flow from creation to sharing.}
+
+\resumeItem{Implemented \textbf{Cloudinary image optimization} with transformed delivery URLs to reduce asset size and improve page performance.}
+
+\resumeItem{Designed the end-to-end \textbf{user experience and interaction flow}, minimizing friction between landing on the app and creating a letter.}
+
+\resumeItem{Built \textbf{secure shareable links} for private letter delivery without requiring recipients to create accounts.}
+
 \resumeItemListEnd
 
 \resumeProjectHeading
-{\textbf{\href{https://galacticgateways.vercel.app}{\underline{Space Tourism Web-App \faExternalLink}}} $|$ \footnotesize\emph{React.js, Parcel.js, CSS}}{}
+{\textbf{\href{https://thradar.vercel.app}
+{\underline{thRadar -- Threat Intelligence Platform}\ \faExternalLink}} $|$
+\footnotesize\emph{React.js, Node.js, Express.js, MongoDB, Python}}{}
 \resumeItemListStart
-   \resumeItem{Developed \textbf{interactive content explorer} with detailed information display and enhanced user engagement through immersive presentation.}
-   \resumeItem{Implemented \textbf{dynamic package customization system} with personalized selection options based on user preferences.}
-   \resumeItem{Built \textbf{end-to-end booking functionality} with ticket reservation system and streamlined user flow.}
-   \resumeItem{Designed \textbf{shopping cart interface} with booking management capabilities and clean UI/UX design.}
+
+\resumeItem{Built a \textbf{full-stack threat intelligence platform} integrating IP intelligence, phishing URL detection, password breach analysis, and a live global threat map into a single interface.}
+
+\resumeItem{Automated ingestion and enrichment of \textbf{10,000+ malicious IPs daily} using AbuseIPDB and IP2Location, with Python scripts, cron jobs, and GitHub Actions maintaining fresh threat intelligence data.}
+
+\resumeItem{Developed an interactive \textbf{3D threat visualization} using Three.js and three-globe to map \textbf{10,000+ malicious IPs} and visualize the \textbf{top 100 weekly Layer 7 attacks} from Cloudflare Radar.}
+
+\resumeItem{Designed \textbf{REST APIs, MongoDB schemas, database indexes, and cloud deployments} across Vercel and Railway, with automated pipelines and modular frontend/backend architecture.}
+
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
 
+% -------------------- SKILLS --------------------
+\section{Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+    \textbf{Frontend}{: React.js, Vue.js, JavaScript, TypeScript, TailwindCSS} \\
+    \textbf{Backend}{: Node.js, Bun.js, Express.js} \\
+    \textbf{Database}{: MongoDB, SQL, PostgreSQL, PocketBase} \\
+    \textbf{APIs \& Services}{: REST APIs, Stripe, Google Calendar API, Cloudinary} \\
+    \textbf{Version Control}{: Git, GitHub} \\
+    \textbf{Design Tools}{: Figma, Framer, Affinity, Canva} \\
+}}
+\end{itemize}
 
-% -------------------- EXPERIENCE --------------------
-\section{Awards}
+% -------------------- EDUCATION --------------------
+\section{Education}
 \resumeSubHeadingListStart
-    \resumeProjectHeading
-        {\textbf{\href{https://www.ijcrt.org/papers/IJCRTBM02017.pdf}{ICCSAS '25 -- International Conference on Computing, STEM and Applied Sciences}}}
-        {\footnotesize{March 2025}}
-    \vspace{-4pt} % tighten gap between heading and description; adjust as needed
-    \resumeItemListStart
-        \resumeItem{Won the \textit{Best Paper Presenter} award (Track 06: Technology) for the research paper titled \textit{``Quantum Cryptography Algorithms Assessment: A Comprehensive Study Using IBM's Qiskit Framework''.}}
-    \resumeItemListEnd
+
+\resumeSubheading
+    {Bachelor of Science in Computer Science}{April 2026}
+    {Patkar Varde College, University of Mumbai}{CGPA: 8.89/10.0}
+
 \resumeSubHeadingListEnd
 
+% -------------------- ACHIEVEMENTS --------------------
+\section{Achievements}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+{\textbf{\href{https://www.ijcrt.org/papers/IJCRTBM02017.pdf}
+{\underline{ICCSAS '25 -- International Conference on Computing, STEM and Applied Sciences}\ \faExternalLink}}}
+{\footnotesize{March 2025}}
+
+\vspace{-4pt}
+
+\resumeItemListStart
+\resumeItem{Won the \textit{\textbf{Best Paper Presenter}} award (Track 06: Technology) for the research paper titled \textit{``Quantum Cryptography Algorithms Assessment: A Comprehensive Study Using IBM's Qiskit Framework''.}}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
 
 \end{document}
