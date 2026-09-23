@@ -1,4 +1,4 @@
-\documentclass[letterpaper,11pt]{article}
+\documentclass[letterpaper,10.5pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -11,8 +11,8 @@
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \usepackage{xcolor}
-\usepackage{fontawesome}
 \usepackage{hyperref}
+\usepackage{textcomp}
 
 \input{glyphtounicode}
 
@@ -23,12 +23,12 @@
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% -------------------- PAGE LAYOUT --------------------
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-0.5in}
-\addtolength{\textheight}{1.0in}
+% -------------------- PAGE LAYOUT (reduced margins for more content / ATS-safe single column) --------------------
+\addtolength{\oddsidemargin}{-0.75in}
+\addtolength{\evensidemargin}{-0.75in}
+\addtolength{\textwidth}{1.5in}
+\addtolength{\topmargin}{-0.9in}
+\addtolength{\textheight}{1.6in}
 
 \urlstyle{same}
 
@@ -39,7 +39,7 @@
 % -------------------- SECTION FORMATTING --------------------
 \titleformat{\section}{
   \vspace{-5pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
 
 \titleformat{\subsection}{
   \vspace{-4pt}\scshape\raggedright\large
@@ -104,53 +104,48 @@
 % -------------------- START OF DOCUMENT --------------------
 \begin{document}
 
-% -------------------- HEADING --------------------
+% -------------------- HEADING (plain-text labels, no icon glyphs, so ATS parsers read every field reliably) --------------------
 \begin{center}
-    \textbf{\Huge \scshape Karan Khandekar} \\ \vspace{7pt}
+    \textbf{\Huge \scshape Karan Khandekar} \\ \vspace{6pt}
     \small
-    \faGithub\ 
-    \href{https://github.com/KaranKhandekar1729}
-    {\underline{KaranKhandekar1729}\ \faExternalLink}
-    \quad
-    \faEnvelope\ 
-    \href{mailto:karankhandekar028@gmail.com}
-    {\underline{Email}}
-    \quad
-    \faPhone\ +919819629531
-    \quad
-    \faMapMarker\ Kandivali, Mumbai
-    \quad
-    \faLinkedin\ 
-    \href{https://linkedin.com/in/karankhandekar}
-    {\underline{karankhandekar}\ \faExternalLink}
-    \faGlobe\
-    \href{https://www.karankhandekar.com}
-    {\underline{Website}\ \faExternalLink}
+    Full-Stack Developer
+    \\ \vspace{4pt}
+    Email: \href{mailto:karankhandekar028@gmail.com}{\underline{karankhandekar028@gmail.com}}
+    \ $|$\ Phone: +91 9819629531
+    \ $|$\ Kandivali, Mumbai, India
+    \\ \vspace{2pt}
+    GitHub: \href{https://github.com/KaranKhandekar1729}{\underline{github.com/KaranKhandekar1729}}
+    \ $|$\ LinkedIn: \href{https://linkedin.com/in/karankhandekar}{\underline{linkedin.com/in/karankhandekar}}
+    \ $|$\ Portfolio: \href{https://www.karankhandekar.com}{\underline{karankhandekar.com}}
 \end{center}
+
+% -------------------- SUMMARY --------------------
+\section{Summary}
+\small{Full-stack developer experienced across the entire web application lifecycle -- frontend, backend, database, and deployment. Builds production platforms end to end: React/JavaScript interfaces, Node.js/Bun.js APIs, MongoDB data layers, and third-party integrations (Stripe, Google Calendar, Cloudinary). Track record of shipping event, course, and content platforms from zero to production with measurable performance and adoption gains.}
 
 % -------------------- PROFESSIONAL EXPERIENCE --------------------
 \section{Professional Experience}
 \resumeSubHeadingListStart
 
 \resumeProjectHeading
-{\textbf{AI Plans} $|$ \footnotesize\emph{Full-stack developer}}
-{March 2025 -- August 2026}
+{\textbf{AI Plans} $|$ \footnotesize\emph{Full-Stack Developer}}
+{November 2024 -- September 2026}
 \resumeItemListStart
 
-\resumeItem{Led the \textbf{complete website redesign} and built a functional \textbf{design system}.}
+\resumeItem{Led the \textbf{complete website redesign} end to end (frontend architecture, component library, and backend integration) and built a functional \textbf{design system}.}
 
-\resumeItem{Built an \textbf{in-house event platform} supporting multiple ticket types, ticket-specific questions, custom information tabs, project submissions, calendar flows, and \textbf{regional organizer/host views across countries}; attracted \textbf{500+ attendees worldwide} and generated \textbf{€1K+} in ticket revenue.}
+\resumeItem{Built a \textbf{full-stack in-house event platform} (React.js frontend, Node/PocketBase backend) supporting multiple ticket types, ticket-specific questions, custom information tabs, project submissions, calendar flows, and \textbf{regional organizer/host views across countries}; attracted \textbf{500+ attendees worldwide} and generated \textbf{\texteuro{}1K+} in ticket revenue.}
 
-\resumeItem{Designed and engineered the \textbf{Moonshot Alignment Program} landing page, generating \textbf{290+ applications}, including \textbf{100+ PhD researchers} and senior engineers from \textbf{Meta, AWS, AMD, and Microsoft}.}
+\resumeItem{Designed and engineered the \textbf{Moonshot Alignment Program} full-stack landing page and application pipeline, generating \textbf{290+ applications}, including \textbf{100+ PhD researchers} and senior engineers from \textbf{Meta, AWS, AMD, and Microsoft}.}
 
-\resumeItem{Built the course platform supporting standalone and cohort-based courses for \textbf{40+ students}, with \textbf{Stripe payment integration}, an admin CMS, and a custom instructor call-booking system with program-level scheduling constraints; improved the learning experience by reducing \textbf{individual lesson load times by up to 99.98\%} through selective data fetching, lazy loading, shimmer loading states, and \textbf{Cloudinary}-backed media delivery, while enabling returning students to reach their lesson from the homepage in \textbf{\textless 5s}.}
+\resumeItem{Built a \textbf{full-stack course platform} (React frontend, backend APIs, database schema) supporting standalone and cohort-based courses for \textbf{40+ students}, with \textbf{Stripe payment integration}, an admin CMS, and a custom instructor call-booking system with program-level scheduling constraints; improved the learning experience by reducing \textbf{individual lesson load times by up to 99.98\%} through selective data fetching, lazy loading, shimmer loading states, and \textbf{Cloudinary}-backed media delivery, while enabling returning students to reach their lesson from the homepage in \textbf{\textless 5s}.}
 
 \resumeItemListEnd
 
 \vspace{-2pt}
 \noindent
 \hspace{0.15in}
-\small{\textbf{Tech Stack:} React.js, JavaScript, Bun.js, PocketBase, TailwindCSS, Stripe.js, Google Calendar API, \textbf{Cloudinary}, Marked.js, Highlight.js}
+\small{\textbf{Tech Stack:} React.js, JavaScript, Bun.js, Node.js, PocketBase, TailwindCSS, Stripe.js, REST APIs, Google Calendar API, Cloudinary, Marked.js, Highlight.js}
 
 \resumeSubHeadingListEnd
 
@@ -159,28 +154,26 @@
 \resumeSubHeadingListStart
 
 \resumeProjectHeading
-{\textbf{\href{https://sendaletter.vercel.app}
-{\underline{Send a Letter}\ \faExternalLink}} $|$
-\footnotesize\emph{React.js, Fabric.js, TailwindCSS, Framer}}
+{\textbf{\href{https://sendaletter.vercel.app}{\underline{Send a Letter}}} $|$
+\footnotesize\emph{Full-Stack -- React.js, Fabric.js, TailwindCSS, Framer}}
 {}
 
 \resumeItemListStart
 
-\resumeItem{Designed and developed an interactive web app for creating and sharing \textbf{personalized digital letters}, with a visual editor and streamlined creation flow used by \textbf{50+ users}.}
+\resumeItem{Designed and developed an interactive \textbf{full-stack web app} for creating and sharing \textbf{personalized digital letters}, with a visual editor and streamlined creation flow used by \textbf{50+ users}.}
 
-\resumeItem{Implemented \textbf{Cloudinary image optimization} with transformed delivery URLs to improve asset delivery and page performance, and built \textbf{secure shareable links} for private letter delivery without requiring recipient accounts.}
+\resumeItem{Implemented \textbf{Cloudinary image optimization} with transformed delivery URLs to improve asset delivery and page performance, and built \textbf{secure shareable links} (backend link generation) for private letter delivery without requiring recipient accounts.}
 
 \resumeItemListEnd
 
 \resumeProjectHeading
-{\textbf{\href{https://github.com/KaranKhandekar1729/thRadar}
-{\underline{thRadar -- Threat Intelligence Platform}\ \faExternalLink}} $|$
-\footnotesize\emph{React.js, Node.js, Express.js, MongoDB, Python}}
+{\textbf{\href{https://github.com/KaranKhandekar1729/thRadar}{\underline{thRadar -- Threat Intelligence Platform}}} $|$
+\footnotesize\emph{Full-Stack -- React.js, Node.js, Express.js, MongoDB, Python}}
 {}
 
 \resumeItemListStart
 
-\resumeItem{Built a \textbf{full-stack threat intelligence platform} integrating IP intelligence, phishing URL detection, password breach analysis, and global threat visualization into a single interface.}
+\resumeItem{Built a \textbf{full-stack threat intelligence platform} (React frontend, Express/Node.js backend, MongoDB) integrating IP intelligence, phishing URL detection, password breach analysis, and global threat visualization into a single interface.}
 
 \resumeItem{Automated ingestion and enrichment of \textbf{10,000+ malicious IPs daily} using AbuseIPDB and IP2Location with Python and scheduled automation.}
 
@@ -191,54 +184,44 @@
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
-% -------------------- SKILLS --------------------
-\section{Skills}
 
-\noindent
-\hspace{0.15in}
-\begin{tabularx}{0.93\textwidth}{
-  @{}>{\raggedright\arraybackslash}X
-  >{\raggedright\arraybackslash}X@{}
-}
-\small
-\textbf{Frontend:} React.js, Vue.js, JavaScript, TypeScript, HTML, CSS, TailwindCSS, Redux
-&
-\textbf{Backend:} Node.js, Bun.js, Express.js, JWT
-\\[3pt]
-
-\textbf{Database:} MongoDB, SQL
-&
-\textbf{APIs \& Services:} REST APIs, Stripe, Google Calendar API, Cloudinary
-\\[3pt]
-
-\textbf{Version Control:} Git, GitHub
-&
-\textbf{Design:} Figma, Framer, Affinity, Canva, Design Systems
-\\[3pt]
-
-\textbf{Accessibility:} WCAG, Accessible UI/UX
-&
-\end{tabularx}
-\vspace{-4pt}
-
+% -------------------- SKILLS (single-column, ATS-friendly) --------------------
+\section{Technical Skills}
+\resumeSubHeadingListStart
+\resumeItem{\textbf{Frontend:} React.js, Vue.js, JavaScript, TypeScript, HTML, CSS, TailwindCSS, Redux}
+\resumeItem{\textbf{Backend:} Node.js, Bun.js, Express.js, JWT, REST APIs}
+\resumeItem{\textbf{Database:} MongoDB, SQL}
+\resumeItem{\textbf{APIs \& Integrations:} Stripe, Google Calendar API, Cloudinary}
+\resumeItem{\textbf{Tools \& Version Control:} Git, GitHub}
+\resumeItem{\textbf{Design:} Figma, Framer, Affinity, Canva, Design Systems}
+\resumeItem{\textbf{Accessibility:} WCAG, Accessible UI/UX}
+\resumeSubHeadingListEnd
 
 % -------------------- ACHIEVEMENTS --------------------
 \section{Achievements}
 \resumeSubHeadingListStart
 
 \resumeProjectHeading
-{\textbf{\href{https://www.ijcrt.org/papers/IJCRTBM02017.pdf}
-{\underline{ICCSAS '25 -- International Conference on Computing, STEM and Applied Sciences}\ \faExternalLink}}}
+{\textbf{\href{https://www.ijcrt.org/papers/IJCRTBM02017.pdf}{\underline{ICCSAS '25 -- International Conference on Computing, STEM and Applied Sciences}}}}
 {\footnotesize{March 2025}}
 
-\vspace{6pt}
+\vspace{3pt}
 
 \noindent
 \hspace{0.15in}
 \small{Won the \textit{\textbf{Best Paper Presenter}} award (Track 06: Technology) for \textit{``Quantum Cryptography Algorithms Assessment: A Comprehensive Study Using IBM's Qiskit Framework''.}}
 
-\resumeSubHeadingListEnd
+\resumeProjectHeading
+{\textbf{\href{https://credly.com/badges/eaeb686e-952a-41bd-98db-bbdc21ea48c2}{\underline{NASA Open Science Qualification}}} -- National Aeronautics and Space Administration}
+{\footnotesize{December 2024}}
 
+\vspace{3pt}
+
+\noindent
+\hspace{0.15in}
+\small{Earned a verified \textbf{Open Science} credential from \textbf{NASA} (Credly-badged), recognizing training in open, transparent, and reproducible scientific research practices.}
+
+\resumeSubHeadingListEnd
 
 % -------------------- EDUCATION --------------------
 \section{Education}
